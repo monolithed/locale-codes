@@ -1,0 +1,33 @@
+{
+    "name": "@monolithed/locale-codes",
+    "description": "A TypeScript package providing strongly typed constants for locale, language, and country codes.",
+    "keywords": [
+        "Locale codes",
+        "Language codes",
+        "country codes",
+        "Constants"
+    ],
+    "version": "1.0.0",
+    "license": "MIT",
+    "repository": "https://github.com/monolithed/locale-codes",
+    "type": "module",
+    "files": [
+        "dist/"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "scripts": {
+        "build": "tsup src --format esm,cjs --dts --out-dir dist --clean",
+        "test": "vitest run",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "tsup": "^8.5.0",
+        "typescript": "^5.9.3",
+        "vitest": "^3.2.4"
+    }
+}
