@@ -19,9 +19,9 @@ import {
     LocaleCodes
 } from '@monolithed/locale-codes';
 
-CountryCodes.GB         // "GB"
-LanguageCodes.RU        // "ru"
-LocaleCodes.EN_US       // "en-US"
+CountryCodes.GB;         // "GB"
+LanguageCodes.RU;        // "ru"
+LocaleCodes.EN_US;       // "en-US"
 ```
 
 ### Extensible
@@ -35,7 +35,7 @@ class CustomLocaleCodes extends LocaleCodes {
     public static readonly ZH_HANS_CN = 'zh-Hans-CN';
 }
 
-CustomHeaders.ZH_HANS_CN    // "zh-Hans-CN"
+CustomHeaders.ZH_HANS_CN;    // "zh-Hans-CN"
 ```
 
 
