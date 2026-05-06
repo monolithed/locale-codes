@@ -5,9 +5,11 @@
         "Locale codes",
         "Language codes",
         "country codes",
-        "Constants"
+        "Constants",
+        "ISO 3166-1",
+        "ISO 639-1"
     ],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "repository": "https://github.com/monolithed/locale-codes",
     "type": "module",

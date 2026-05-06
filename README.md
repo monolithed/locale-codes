@@ -38,9 +38,35 @@ class CustomLocaleCodes extends LocaleCodes {
 CustomHeaders.ZH_HANS_CN;    // "zh-Hans-CN"
 ```
 
+### The extensibility trade-off
+
+To make interfaces extensible, we use static class properties. Unlike enums, a class cannot be used directly as a type representing a set of fields:
+
+```ts
+type Languages = {
+    [key in LanguageCodes]?: string; // ❌
+};
+```
+The code above will throw an error. To fix it:
+
+```ts
+type LanguageCode = typeof LanguageCodes[keyof typeof LanguageCodes];
+
+type Languages = {
+    [key in Extract<LanguageCode, string>]?: string; // ✅
+};
+
+const locale: Languages = {
+    en: 'magic!'
+};
+```
+
+In most cases, you don't need this, but it's a trade‑off you make for extensibility.
+
 
 ### Benefits
 
+* **Standard-compliant**: ISO 3166-1 and ISO 639-1 
 * **Type-safe**: Avoid typos in locales
 * **Autocompletion**: Full IDE support with TypeScript
 * **Zero dependencies**: Lightweight and fast
@@ -49,7 +75,6 @@ CustomHeaders.ZH_HANS_CN;    // "zh-Hans-CN"
 
 
 ### Contributing
-
 
 Please motivate yourself to submit a PR.
 
