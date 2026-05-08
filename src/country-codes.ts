@@ -1,3 +1,5 @@
+import {StringStaticValues} from './type-helper.ts';
+
 /** ISO 3166-1 alpha 2 */
 
 class CountryCodes {
@@ -253,5 +255,7 @@ class CountryCodes {
     static readonly ZW = 'ZW';
 }
 
-export {CountryCodes};
+type CountryCode = StringStaticValues<typeof CountryCodes>;
 
+export {CountryCodes};
+export type {CountryCode};

@@ -1,3 +1,5 @@
+import {StringStaticValues} from './type-helper.ts';
+
 /** ISO 639-1 */
 
 class LanguageCodes {
@@ -16,7 +18,7 @@ class LanguageCodes {
     static readonly BA = 'ba';
     static readonly BE = 'be';
     static readonly BG = 'bg';
-    
+
     /* @deprecated */
     static readonly BH = 'bh';
     static readonly BI = 'bi';
@@ -189,4 +191,7 @@ class LanguageCodes {
     static readonly ZU = 'zu';
 }
 
+type LanguageCode = StringStaticValues<typeof LanguageCodes>;
+
 export {LanguageCodes};
+export type {LanguageCode};

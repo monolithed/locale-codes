@@ -50,10 +50,10 @@ type Languages = {
 The code above will throw an error. To fix it:
 
 ```ts
-type LanguageCode = typeof LanguageCodes[keyof typeof LanguageCodes];
+import type {LocaleCode} from '@monolithed/locale-codes';
 
 type Languages = {
-    [key in Extract<LanguageCode, string>]?: string; // ✅
+    [key in LocaleCode]?: string; // ✅
 };
 
 const locale: Languages = {
@@ -62,6 +62,8 @@ const locale: Languages = {
 ```
 
 In most cases, you don't need this, but it's a trade‑off you make for extensibility.
+
+Available types are derived from static class values and should be used instead of referencing the class directly in type positions. These include `LocaleCode`, `LanguageCode`, and `CountryCode`.
 
 
 ### Benefits

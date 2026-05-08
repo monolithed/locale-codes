@@ -1,5 +1,6 @@
 {
     "name": "@monolithed/locale-codes",
+    "version": "1.1.0",
     "description": "A TypeScript package providing strongly typed constants for locale, language, and country codes.",
     "keywords": [
         "Locale codes",
@@ -9,7 +10,6 @@
         "ISO 3166-1",
         "ISO 639-1"
     ],
-    "version": "1.0.1",
     "license": "MIT",
     "repository": "https://github.com/monolithed/locale-codes",
     "type": "module",

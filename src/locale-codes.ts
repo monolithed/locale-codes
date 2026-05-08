@@ -1,3 +1,5 @@
+import {StringStaticValues} from './type-helper.ts';
+
 /** ISO 639-1 + ISO 3166-1 alpha 2 */
 
 class LocaleCodes {
@@ -155,4 +157,7 @@ class LocaleCodes {
     static readonly ZU_ZA = 'zu-ZA';
 }
 
+type LocaleCode = StringStaticValues<typeof LocaleCodes>;
+
 export {LocaleCodes};
+export type {LocaleCode};
